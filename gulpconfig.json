@@ -1,0 +1,26 @@
+{
+  "browserSyncOptions": {
+    "notify": true,
+    "open": true,
+    "watch": true,
+    "server": "./"
+  },
+  "browserSyncWatchFiles": [
+    "./**/*.html"
+  ],
+  "styles": {
+    "src": "src/sass/**/*.sass",
+    "dest": "css"
+  },
+  "images": {
+    "src": "src/images/**/*",
+    "dest": "img"
+  },
+  "scripts": {
+    "src": [
+      "src/js/slick.min.js",
+      "src/js/scripts.js"
+    ],
+    "dest": "js"
+  }
+}
