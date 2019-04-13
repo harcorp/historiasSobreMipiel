@@ -318,7 +318,7 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   transition-delay: 380ms;
-  background: url("../../img/background-menu.png") center right no-repeat;
+  background: url("../img/background-menu.png") center right no-repeat;
   z-index: 1;
   width: calc(70% - 50px);
   margin-left: 20%;
@@ -339,22 +339,27 @@ body {
 
 .contenido {
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 1s ease-in-out;
   transition-delay: 380ms;
   position: absolute;
-  background: url("../../img/fondo_texto.png") center right no-repeat;
+  background: url("../img/fondo_texto.png") center right no-repeat;
   background-size: cover;
   z-index: 1;
   top: 220px;
   width: calc(80% - 50px);
   height: calc(75% - 50px);
   margin-left: 20%; }
+  .contenido h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #f1b059; }
   .contenido .contenidoHtml {
     height: calc(100% - 40px);
     width: calc(100% - 40px);
-    margin: 20px;
+    margin: 30px;
+    padding: 30px 30px 30px 20px;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     overflow-y: scroll;
     text-align: justify; }
     .contenido .contenidoHtml::-webkit-scrollbar {
@@ -371,36 +376,35 @@ body {
   text-decoration: underline;
   font-size: 20px;
   font-weight: bold;
-  color: black; }
+  color: #f1b059; }
 
 .oculta {
   display: none; }
 
 .gallery-slick {
   position: absolute;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 100%;
   z-index: 1000;
-  right: 5%;
-  bottom: 5%;
+  left: 10%;
   background: url("../img/background-video.png") no-repeat center center;
   background-size: 100% 100%; }
-  .gallery-slick .container-fluid {
+  .gallery-slick .container {
     height: 100%;
     padding-top: 5%; }
-    .gallery-slick .container-fluid .row {
+    .gallery-slick .container .row {
       height: 100%;
       padding: 30px; }
-      .gallery-slick .container-fluid .row .table {
+      .gallery-slick .container .row .table {
         display: table;
         height: 100%; }
-        .gallery-slick .container-fluid .row .table .vAlign {
+        .gallery-slick .container .row .table .vAlign {
           display: table-cell;
           vertical-align: middle;
           color: #ffffff !important;
           font-size: 20px;
           text-align: center; }
-          .gallery-slick .container-fluid .row .table .vAlign .descriptionGallery {
+          .gallery-slick .container .row .table .vAlign .descriptionGallery {
             position: absolute;
             bottom: 8px;
             background-color: rgba(0, 0, 0, 0.5);
@@ -421,3 +425,12 @@ body {
   color: white;
   cursor: pointer;
   font-size: 32px; }
+
+.videoContainer {
+  background: url("../img/background-video.png") no-repeat center center;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  z-index: 1000;
+  left: 10%; }

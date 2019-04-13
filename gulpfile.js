@@ -50,8 +50,18 @@ function imageMin() {
     return (
         gulp
             .src(cfg.images.src)
-            .pipe(imagemin())
+            //.pipe(imagemin())
             .pipe(gulp.dest(cfg.images.dest))
+            .pipe(browserSync.stream())
+    )
+}
+
+function copyAudios() {
+    return (
+        gulp
+            .src(cfg.audios.src)
+            .pipe(gulp.dest(cfg.audios.dest))
+            .pipe(browserSync.stream())
     )
 }
 
@@ -83,6 +93,7 @@ function watch() {
     browserSync.init(cfg.browserSyncWatchFiles, cfg.browserSyncOptions);
     gulp.watch(cfg.styles.src, style);
     gulp.watch(cfg.scripts.src, scripts);
+    gulp.watch(cfg.audios.src, copyAudios);
     gulp.watch("src/images/*", imageMin);
 }
 
@@ -93,3 +104,4 @@ exports.styleMin = styleMin;
 exports.imageMin = imageMin;
 exports.scripts = scripts;
 exports.scriptsLint = scriptsLint;
+exports.copyAudios = copyAudios;

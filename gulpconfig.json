@@ -16,6 +16,10 @@
     "src": "src/images/**/*",
     "dest": "img"
   },
+  "audios": {
+    "src": "src/audios/**/*",
+    "dest": "audios"
+  },
   "scripts": {
     "src": [
       "src/js/slick.min.js",
